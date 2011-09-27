@@ -2,21 +2,21 @@
 /**
  * Example autoload implementation which uses the generated class map configuration
  *
- * This file contains the class definition and the registration of the autoloader 
- * together for the sake of simplicity. This is up to you to separate the logic to 
+ * This file contains the class definition and the registration of the autoloader
+ * together for the sake of simplicity. This is up to you to separate the logic to
  * your requirements/wishes.
  *
  * Usage:
  * <pre>
- * // include this file, e. g. at the beginning of your scripts or in a bootstrap 
+ * // include this file, e. g. at the beginning of your scripts or in a bootstrap
  * // implementation
  * require_once('/path/to/autoloader.php');
  * // ... then use your classes ...
  * </pre>
  *
  * @category    Development
- * @package 	mpAutoloaderClassMap
- * @author		Murat Purc <murat@purc.de>
+ * @package     mpAutoloaderClassMap
+ * @author      Murat Purc <murat@purc.de>
  * @copyright   Copyright (c) 2009-2011 Murat Purc (http://www.purc.de)
  * @license     http://www.gnu.org/licenses/gpl-2.0.html - GNU General Public License, version 2
  * @version     $Id$
@@ -37,7 +37,7 @@ class myAutoloader
     /**
      * Autoloader implementation
      * @param string $name The required class name
-     * @throws Exception if autoloader couldn't set class map configuration in initial call 
+     * @throws Exception if autoloader couldn't set class map configuration in initial call
      */
     public static function autoload($name)
     {

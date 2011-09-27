@@ -54,7 +54,7 @@ return array(
 );
 
 // usage:
-// a.) first you have to register a autoloader which loads required classes by 
+// a.) first you have to register a autoloader which loads required classes by
 // using the class map array structure.
 // b.) then you can use something like
 $foo = new Com_Foobar_Helloworld();
@@ -192,7 +192,7 @@ class myAutoloader
     /**
      * Autoloader implementation
      * @param string $name The required class name
-     * @throws Exception if autoloader couldn't set class map configuration in initial call 
+     * @throws Exception if autoloader couldn't set class map configuration in initial call
      */
     public static function autoload($name)
     {
