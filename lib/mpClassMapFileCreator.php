@@ -5,7 +5,7 @@
  * @category    Development
  * @package 	mpAutoloaderClassMap
  * @author		Murat Purc <murat@purc.de>
- * @copyright   Copyright (c) 2009-2010 Murat Purc (http://www.purc.de)
+ * @copyright   Copyright (c) 2009-2011 Murat Purc (http://www.purc.de)
  * @license     http://www.gnu.org/licenses/gpl-2.0.html - GNU General Public License, version 2
  * @version     $Id$
  */
@@ -79,7 +79,7 @@ class mpClassMapFileCreator
         $this->_data->subpackage = 'Classmap';
         $this->_data->version    = '0.1';
         $this->_data->author     = 'System';
-        $this->_data->copyright  = 'Copyright (c) 2009-2010 Murat Purc (http://www.purc.de)';
+        $this->_data->copyright  = 'Copyright (c) 2009-2011 Murat Purc (http://www.purc.de)';
         $this->_data->license    = 'http://www.gnu.org/licenses/gpl-2.0.html - GNU General Public License, version 2';
     }
 

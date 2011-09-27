@@ -14,7 +14,7 @@
  * @category    Development
  * @package 	mpAutoloaderClassMap
  * @author		Murat Purc <murat@purc.de>
- * @copyright   Copyright (c) 2009-2010 Murat Purc (http://www.purc.de)
+ * @copyright   Copyright (c) 2009-2011 Murat Purc (http://www.purc.de)
  * @license     http://www.gnu.org/licenses/gpl-2.0.html - GNU General Public License, version 2
  * @version     $Id$
  */
@@ -35,7 +35,7 @@ $context->destinationFile = $context->currentPath . '/classmap.configuration.php
 // list of paths from where all class/interface names should be found
 // NOTE: Path depends on used environment and should be adapted
 $context->pathsToParse = array(
-    'C:/Progs/xampp/php/PEAR/'
+    '/path/to/my/project'
 );
 
 // list to collect class maps
@@ -43,15 +43,19 @@ $context->classMapList = array();
 
 // class file finder options
 $context->options = array(
-    'excludeDirs'       => array('.channels', '.registry', 'data', 'docs', 'test', 'tests'),
+    // exclude following folder names
+    'excludeDirs'       => array('temp', 'session', 'docs', 'tests'),
+    // no specific file exclusion
     'excludeFiles'      => array(),
+    // parse all files with '.php' extension
     'extensionsToParse' => '.php',
+    // disbale debugging
     'enableDebug'       => false,
 );
 
 
 ################################################################################
-##### Proccess
+##### Process
 
 // include required classes
 include_once($context->currentPath . 'lib/mpClassTypeFinder.php');
