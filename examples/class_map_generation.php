@@ -23,7 +23,15 @@ declare(strict_types=1);
 
 // ##### Initialization/Settings
 
-require_once __DIR__ . '/../vendor/autoload.php';
+if (is_file(__DIR__ . '/../../../autoload.php')) {
+    // File is within vendor folder
+    require_once __DIR__ . '/../../../autoload.php';
+} elseif (is_file(__DIR__ . '/../vendor/autoload.php')) {
+    // File is outside the vendor folder, e.g. {project_root}/examples
+    require_once __DIR__ . '/../vendor/autoload.php';
+} else {
+    die('Could not locate vendor/autoload.php');
+}
 
 // Path and name of class map file to store the class map definitions.
 // Note: PHP needs write-permissions for the folder!

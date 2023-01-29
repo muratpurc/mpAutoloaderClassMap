@@ -18,7 +18,15 @@ declare(strict_types=1);
  * @license    http://www.gnu.org/licenses/gpl-2.0.html - GNU General Public License, version 2
  */
 
-require_once __DIR__ . '/../vendor/autoload.php';
+if (is_file(__DIR__ . '/../../../autoload.php')) {
+    // File is within vendor folder
+    require_once __DIR__ . '/../../../autoload.php';
+} elseif (is_file(__DIR__ . '/../vendor/autoload.php')) {
+    // File is outside the vendor folder, e.g. {project_root}/examples
+    require_once __DIR__ . '/../vendor/autoload.php';
+} else {
+    die('Could not locate vendor/autoload.php');
+}
 
 $file = __DIR__ . '/files/namespace.php';
 
