@@ -26,16 +26,46 @@ in order to install this package.
 
 ### Install via git clone
 
-Open your command line tool, clone the repository, and switch to the directory.
+Open your command line tool, clone the repository, change to the directory, and run composer.
 
 ```sh
+# Clone from GitHub
 $ git clone https://github.com/muratpurc/mpAutoloaderClassMap
+
+# Change to the package folder
 $ cd mpAutoloaderClassMap
+
+# Run composer
+$ composer install
 ```
 
-### Download from GitHub
+### Download from GitHub with bash
+
+Open bash, download the latest version (see the latest tag) from GitHub, extract the archive, change to the directory, and run composer.
+
+```sh
+# Download release
+$ curl -s -L https://github.com/muratpurc/mpAutoloaderClassMap/archive/refs/tags/0.2.1.tar.gz -o mpAutoloaderClassMap-0.2.1.tar.gz
+
+# Extract archive
+$ tar -xzf mpAutoloaderClassMap-0.2.1.tar.gz
+
+# Change to the extracted folder
+$ cd mpAutoloaderClassMap-0.2.1
+
+# Run composer
+$ composer install
+```
+
+### Manually download from GitHub
 
 Download the zip package from [GitHub](https://github.com/muratpurc/mpAutoloaderClassMap) and extract it to a folder.
+
+Open your command line tool, change to the extracted folder and run composer.
+
+```sh
+$ composer install
+```
 
 ---
 
@@ -58,7 +88,7 @@ and to generate a class map file, which can be used with a custom autoloader imp
 
 ----
 
-## Options
+## Class Mao Generator Options
 
 There a some options to control class map creation described as follows:
 
@@ -92,7 +122,8 @@ Default value is `false`
 
 The AutoloaderClassMap comes with a build-in `Autoloader` implementation, see [Autoloader.php](./src/Autoloader.php).
 
-You need to define the path to your class map file in order to use the build-in `Autoloader`. This can be done by defining an environment variable or by setting the PHP superglobal `$GLOBAL` variable.
+You need to define the path to your class map file in order to use the build-in `Autoloader`. 
+This can be done by defining an environment variable or by setting the PHP superglobal `$GLOBAL` variable.
 
 ### Environment Variable
 
