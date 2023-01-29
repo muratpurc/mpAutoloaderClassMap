@@ -1,0 +1,24 @@
+{
+    "name": "purc/autoloader-class-map",
+    "type": "library",
+    "description": "Autoloader class map generator",
+    "keywords": [
+        "php",
+        "autoload",
+        "autoloader",
+        "classmap",
+        "generator"
+    ],
+    "authors": [
+        {
+            "name": "Murat Purç",
+            "email": "murat@purc.de",
+            "homepage": "https://www.purc.de"
+        }
+    ],
+    "license": ["GPL-2.0-or-later"],
+    "autoload": {
+        "psr-4": {
+            "Purc\\AutoloaderClassMap\\": "src/"
+        }
+    }}
