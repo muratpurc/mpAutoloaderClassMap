@@ -1,7 +1,9 @@
 # AutoloaderClassMap
 
-Is able to parse several defined directories/files for existing `class`/`interface`/`trait` and to generate a
-class map configuration file which is usable for an autoloader implementation.
+A PHP based class map generator and autoloader for usage with [composer](https://getcomposer.org/) or in PHP projects.
+
+Is able to parse several defined directories/files for existing `class`/`interface`/`trait` and 
+to generate a class map configuration file which is usable for an autoloader implementation.
 
 ---
 
@@ -133,6 +135,23 @@ $GLOBALS['PURC_AUTOLOADER_CLASS_MAP_FILE'] = '/path/to/your/class_map_file.php';
 ---
 
 ## Usage
+
+The AutoloaderClassMap `examples` will be within the `vendor` folder (`vendor/purc/autoloader-class-map/examples`)
+in case you have installed the package via composer.
+
+You should copy the `examples` folder to you project root, by typing following command in you command line tool:
+
+```sh
+cp -r ./vendor/purc/autoloader-class-map/examples ./examples
+```
+
+This step ist not mandatory, but most likely you need to do some adaptions in the example files, 
+e.g. configuring the class map creation to your needs, and it is not recommended to modify files
+within the `vendor` folder. You can also use the logic in [class_map_generation.php](./examples/class_map_generation.php) 
+as a blueprint and implement your own class map creation script.
+
+The description below will assume, that the `examples` folder is in your project root, and you are using 
+the example files being delivered with the AutoloaderClassMap package.
 
 ### Create a class map configuration
 

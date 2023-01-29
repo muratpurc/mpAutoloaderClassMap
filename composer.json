@@ -1,7 +1,7 @@
 {
     "name": "purc/autoloader-class-map",
     "type": "library",
-    "description": "Autoloader class map generator",
+    "description": "Autoloader class map generator and autoloader for usage in composer or PHP projects",
     "keywords": [
         "php",
         "autoload",
@@ -16,6 +16,9 @@
             "homepage": "https://www.purc.de"
         }
     ],
+    "require": {
+        "php": ">=7.0"
+    },
     "license": ["GPL-2.0-or-later"],
     "autoload": {
         "psr-4": {
