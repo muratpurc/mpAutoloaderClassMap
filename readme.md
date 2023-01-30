@@ -1,8 +1,9 @@
 # AutoloaderClassMap
 
-A PHP based class map generator and autoloader for usage with [composer](https://getcomposer.org/) or in PHP projects.
+A PHP based class map generator and autoloader for usage with [composer](https://getcomposer.org/) or 
+directly in PHP projects.
 
-Is able to parse several defined directories/files for existing `class`/`interface`/`trait` and 
+Is able to parse several defined directories/files for existing `class`/`interface`/`trait` definitions and 
 to generate a class map configuration file which is usable for an autoloader implementation.
 
 ---
@@ -79,12 +80,12 @@ before the existence of the PHP Standard Recommendation ([PSR](https://www.php-f
 
 If the project is not PSR-4 compatible and/or there is no way to map automatically required 
 `class`/`interface`/`trait` names to file system location, and you want to get rid of all `require`/`include` 
-statements, using a class map configuration is probably the convenient solution. And this is the main idea
-behind this tool, it creates a class map configuration file by fetching all found classes, interfaces, and
-traits within a defined path.
+statements in your PHP files, then using a class map configuration is probably the convenient solution.
 
-The AutoloaderClassMap helps you to parse specific folders for `class`, `interface`, and `trait` definitions,
-and to generate a class map file, which can be used with a custom autoloader implementation.
+The AutoloaderClassMap parses specific folders for `class`, `interface`, and `trait` definitions, and generates
+a class map file from the parse results. The class map file can be used with a custom autoloader implementation,
+which deals with loading the required source files, the first time you use one of the class, interface or trait
+names in your PHP scripts.
 
 ----
 

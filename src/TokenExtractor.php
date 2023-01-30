@@ -162,6 +162,8 @@ class TokenExtractor
             $contents = file_get_contents($this->fileInfo->getRealPath());
         }
 
+        // Replace HEREDOC/NOWDOC body against custom content in order to solve issues with
+        // occurred pcre backtrace limit string in generated paths (.../pcrebacktracelimit/...).
         $pattern = '/(<<<)([\'"]?)(\w+)([\'"]?)(.*?)\3(;)/s';
         $replace = '${1}${2}${3}${4}' . PHP_EOL . '*replaced heredoc/nowdoc*' . PHP_EOL . '${3}${6}';
         $contents = preg_replace($pattern, $replace, $contents);
