@@ -89,7 +89,7 @@ names in your PHP scripts.
 
 ----
 
-## Class Mao Generator Options
+## Class Map Generator Options
 
 There a some options to control class map creation described as follows:
 
@@ -218,7 +218,7 @@ autoloading mechanism.
 
 ### In a PHP Script
 
-Require the autoloader script in PHPt, e.g. at the beginning of the application bootstrap process. 
+Require the autoloader script in PHP, e.g. at the beginning of the application bootstrap process. 
 This must be done before using an entry defined in the class map file!
 
 ```php
